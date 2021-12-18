@@ -12,19 +12,19 @@ function App() {
             <div className="">
               <ul className="flex items-center space-x-16 ">
                 <li>
-                  <a href="#">Home</a>
+                  <div >Home</div>
                 </li>
                 <li>
-                  <a href="#">About</a>
+                  <div >About</div>
                 </li>
                 <li>
-                  <a href="#">Block</a>
+                  <div >Block</div>
                 </li>
                 <li>
-                  <a href="#">Contact</a>
+                  <div >Contact</div>
                 </li>
                 <li>
-                  <a href="#">Help</a>
+                  <div >Help</div>
                 </li>
               </ul>
             </div>
@@ -132,7 +132,7 @@ function App() {
           </div>
           <div className="">
             <div className="">
-              <img className="max-w-xs" src="/mob.png" alt="" />
+              <img className="max-w-sm" src="/mob.png" alt="" />
             </div>
           </div>
         </div>
