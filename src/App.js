@@ -731,8 +731,8 @@ function App() {
               </div>
               <div className="">
                 <img
-                  className="w-12"
-                  src="/YouTube-Icon-Full-Color-Logo.wine.svg"
+                  className="w-16"
+                  src="/YouTube-Icon-Almost-Black-Logo.wine.svg"
                   alt=""
                 />
               </div>
