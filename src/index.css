@@ -22,22 +22,28 @@ code {
   background: #11222a;
 } */
 
-.text-black{
-  color: #050C0E;
+.text-black {
+  color: #050c0e;
 }
-.bg-l-green{
+.bg-l-green {
   background: #afe351;
 }
-.text-l-green{
+.text-l-green {
   color: #afe351;
 }
-.bgreen{
+.bgreen {
   background: #7fe15e;
 }
 
-.box-bg-t{
+.box-bg-t {
   background: #20454f38;
 }
-.box-bg{
+.box-bg {
   background: #20454f;
+}
+
+.hr {
+  filter: hue-rotate(287deg) !important;
+  transform: scale(1) !important;
+  object-position: 48% 2% !important;
 }

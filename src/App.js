@@ -6,18 +6,24 @@ function App() {
       <div className="px-16 mx-auto conatiner max-w-7xl">
         <div className="py-8">
           <div className="flex items-center justify-between text-white">
-            <div className="">
-              <img src="/logoo.png" alt="" />
+            <div className="text-5xl font-black text-l-green">
+              {/* <img src="/logoo.png" alt="" /> */}
+              Flystrix
             </div>
-            <div className="">
-              <ul className="flex items-center space-x-8 ">
-                <li>
-                  <div>Home</div>
-                </li>
-                <li>
-                  <div>About</div>
-                </li>
-                <li>
+
+            <div className="flex items-center space-x-6">
+              <div className="">
+                <ul className="flex items-center space-x-8 ">
+                  <li>
+                    <div>Home</div>
+                  </li>
+                  <li>
+                    <div>About</div>
+                  </li>
+                  <li>
+                    <div>SERVICES</div>
+                  </li>
+                  {/* <li>
                   <div>Core Services</div>
                 </li>
                 <li>
@@ -28,25 +34,28 @@ function App() {
                 </li>
                 <li>
                   <div>Help</div>
-                </li>
-              </ul>
-            </div>
-            <div className="space-x-5 text-black">
-              {/* <button className="w-24 py-2 bg-white rounded-lg">Login</button> */}
-              <button className="px-8 py-2 rounded-lg bg-l-green">
-                Contact Us
-              </button>
+                </li> */}
+                </ul>
+              </div>
+              <div className="space-x-5 text-black">
+                {/* <button className="w-24 py-2 bg-white rounded-lg">Login</button> */}
+                <button className="px-8 py-2 rounded-lg bg-l-green">
+                  Get in touch
+                </button>
+              </div>
             </div>
           </div>
         </div>
         {/*  */}
 
-        <div className="grid grid-cols-2 py-20 place-items-center">
-          <div className="space-y-10 ">
-            <div className="text-3xl text-l-green">AI-powered</div>
+        <div className="flex items-center py-20 place-items-center">
+          <div className="w-5/12 space-y-10">
+            <div className="text-2xl text-l-green">
+              Into the world of Machine Learning
+            </div>
 
-            <div className="font-black text-white text-8xl">
-              solutions <br></br> provider
+            <div className="text-6xl font-black text-white">
+              Let’s explore the world of Artificial Intelligence
             </div>
 
             <div className="text-lg text-white">
@@ -59,19 +68,64 @@ function App() {
               </button>
             </div>
           </div>
-          <div className="">
-            <img
-              className="w-full max-w-xl"
-              src="/bimg-removebg-preview.png"
-              alt=""
-            />
+          <div className="w-7/12">
+            <img className="w-full " src="/bimg-removebg-preview.png" alt="" />
           </div>
         </div>
         {/*  */}
-        <div className="text-center text-white">
-          <div className="max-w-4xl py-10 mx-auto space-y-8">
-            <div className="text-6xl font-bold text-l-green "> About</div>
-            <div className="text-white text-opacity-60 ">
+        <div className="text-white ">
+          <div className="py-10 mx-auto space-y-8">
+            <div className="text-5xl font-bold text-center text-l-green">
+              {" "}
+              About Flystrix
+            </div>
+
+            <div className="flex items-center">
+              <div className="">
+                <img className="hr" src="/img.jpg" alt="" />
+              </div>
+              <div className="p-8">
+                <ul className="space-y-3 list-none list-outside">
+                  <li>
+                    {" "}
+                    <div>
+                      Flystrix Technologies was founded by a team of Aerospace
+                      engineers while participating in a contest conducted by
+                      the Indian Airforce for the development of swarm drone
+                      technology.
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      The team progressed into advanced stages of the contest
+                      which involved the design and development of AI-based
+                      Computer vision algorithms that can detect and categorize
+                      human/wildlife, and recognize the human hand signals and
+                      infer its meaning.
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      Since then, Flystrix Technologies has evolved into an
+                      AI-Powered solutions provider with key expertise in
+                      Machine Learning, Neural Networks, Video Analytics, Image
+                      Analysis, Predictive Analysis, AI-powered product
+                      development – from scratch & enhancements as well.
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      We are proficient in solving problems intuitively. Our
+                      team consists of experts from Electronics, Avionics,
+                      Machine learning, Database Management, and Aerospace
+                      engineering.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* <div className="text-white text-opacity-60 ">
               Flystrix Technologies was founded by a team of Aerospace engineers
               while participating in a contest conducted by the Indian Airforce
               for the development of swarm drone technology. The team progressed
@@ -86,9 +140,20 @@ function App() {
               proficient in solving problems intuitively. Our team consists of
               experts from Electronics, Avionics, Machine learning, Database
               Management, and Aerospace engineering.
-            </div>
+            </div> */}
           </div>
         </div>
+        {/*  */}
+        <div className="text-white ">
+          <div className="py-10 mx-auto space-y-8">
+            <div className="text-5xl font-bold text-center text-l-green">
+              {" "}
+              Our Latest Project
+            </div>
+
+            </div>
+            </div>
+        {/*  */}
         <div className="text-center text-white">
           <div className="py-10">
             <div className="text-4xl font-bold text-l-green ">
