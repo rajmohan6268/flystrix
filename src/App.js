@@ -1,8 +1,12 @@
 import "./App.css";
+import { useState } from "react";
 
 import Testimonal from "./componets/testimonal";
 
 function App() {
+  const [showabout, Setshowabout] = useState(true);
+  const [showlatest, Setshowlatest] = useState(false);
+
   return (
     <div className="Green ">
       <div className="px-16 mx-auto conatiner max-w-7xl">
@@ -17,16 +21,16 @@ function App() {
               <div className="">
                 <ul className="flex items-center space-x-8 ">
                   <li>
-                    <div>About</div>
+                    <a href="#About">About</a>
                   </li>
                   <li>
-                    <div>Our latest </div>
+                    <a href="#Our latest">Our latest </a>
                   </li>
                   <li>
-                    <div>Core </div>
+                    <a href="#core">Core </a>
                   </li>
                   <li>
-                    <div> Computation Vision</div>
+                    <a href="#Computation Vision"> Computation Vision</a>
                   </li>
                   {/* <li>
                   <div></div>
@@ -53,7 +57,7 @@ function App() {
 
         <div className="flex items-center py-20 place-items-center">
           <div className="w-5/12 space-y-10">
-            <div className="text-2xl text-l-green">
+            <div className="text-2xl text-t-title">
               Into the world of Machine Learning
             </div>
 
@@ -76,18 +80,17 @@ function App() {
           </div>
         </div>
         {/*  */}
-        <div className="text-white ">
+        <div id="About" className="text-white ">
           <div className="py-10 mx-auto space-y-8">
-           
-
             <div className="flex items-center">
-              <div className="">
+              <div className="w-1/2">
                 <img className="hr" src="/img.jpg" alt="" />
               </div>
-              <div className="p-8"> <div className="mb-4 text-2xl font-bold text-left text-l-green">
-              About Flystrix
-
-            </div>
+              <div className="w-1/2 p-8">
+                {" "}
+                <div className="mb-4 text-2xl font-bold text-left clt-text-2">
+                  About Flystrix
+                </div>
                 <ul className="space-y-3 text-white list-none list-outside text-opacity-60">
                   <li>
                     <div>
@@ -102,13 +105,13 @@ function App() {
                       The team progressed into advanced stages of the contest
                       which involved the design and development of AI-based
                       Computer vision algorithms{" "}
-                      <span className="hidden">
+                      <span className={showabout ? "hidden" : ""}>
                         that can detect and categorize human/wildlife, and
                         recognize the human hand signals and infer its meaning.
                       </span>
                     </div>
                   </li>
-                  <li className="hidden">
+                  <li className={showabout ? "hidden" : ""}>
                     <div>
                       Since then, Flystrix Technologies has evolved into an
                       AI-Powered solutions provider with key expertise in
@@ -117,7 +120,7 @@ function App() {
                       development – from scratch & enhancements as well.
                     </div>
                   </li>
-                  <li className="hidden">
+                  <li className={showabout ? "hidden" : ""}>
                     <div>
                       We are proficient in solving problems intuitively. Our
                       team consists of experts from Electronics, Avionics,
@@ -127,8 +130,11 @@ function App() {
                   </li>
                   <li>
                     <div className="">
-                      <button className="px-4 py-2 text-sm border rounded-lg btn">
-                        Read More
+                      <button
+                        onClick={(e) => [Setshowabout(!showabout)]}
+                        className="px-4 py-2 text-sm border rounded-lg btn"
+                      >
+                        {showabout ? "Read More" : "show less"}
                       </button>
                     </div>
                   </li>
@@ -163,17 +169,19 @@ function App() {
           </div>
         </div> */}
         {/*  */}
-        <div className="my-10 text-center text-white">
+        <div id="Our latest" className="my-10 text-center text-white">
           {/* <div className="py-10">
             <div className="text-4xl font-bold text-l-green ">
               Core Services
             </div>
             <div className="text-xl text-white">Best features </div>
           </div> */}
-          <div className="my-4 text-2xl font-bold text-left text-l-green">
-              Our Latest Project
-            </div>
-          <div className="grid grid-cols-2 gap-12 ">
+          <div className="my-4 text-2xl font-bold text-left clt-text-2">
+            Our Latest Project
+          </div>
+          <div
+            className={!showlatest ? " grid grid-cols-2 gap-12  " : "hidden   "}
+          >
             <div className="text-justify text-white text-opacity-60">
               In-person traffic policing often leads to heated arguments between
               traffic policemen and vehicle owners, which results in unseemly
@@ -187,7 +195,10 @@ function App() {
               algorithms in identifying the offenders at the comfort of the
               control room environment.
               <div className="flex justify-start mt-4">
-                <button className="px-4 py-2 text-sm border rounded-lg btn">
+                <button
+                  onClick={(e) => [Setshowlatest(!showlatest)]}
+                  className="px-4 py-2 text-sm border rounded-lg btn"
+                >
                   Read More
                 </button>
               </div>
@@ -200,7 +211,14 @@ function App() {
               />
             </div>
           </div>
-          <ul className="hidden space-y-4 text-justify text-white text-opacity-60">
+
+          <ul
+            className={
+              !showlatest
+                ? "hidden space-y-4 text-justify text-white text-opacity-60"
+                : " space-y-4 text-justify text-white text-opacity-60"
+            }
+          >
             <li>
               In-person traffic policing often leads to heated arguments between
               traffic policemen and vehicle owners, which results in unseemly
@@ -291,44 +309,18 @@ function App() {
           </div> */}
         </div>
         {/*  */}
-
-        <div className="my-16">
-          <div className="text-l-green">Testimonal</div>
-
-          <div className="flex items-center justify-between">
-            <div className="text-4xl font-bold text-white">
-              People Say About Us
-            </div>
-
-          </div>
-        </div>
-        <div className="flex justify-center">
-        <div className="inline-flex items-center justify-center p-12 mx-auto space-x-4 space-y-4 text-left text-white testimonal rounded-2xl">
-          <div className="space-y-4">
-            <div className="">
-              <img className="w-40 h-40 rounded-full" src="/t1.png" alt="" />
-            </div>
-          </div>
-
-          <div className="w-full max-w-sm space-y-2">
-            <div className="text-justify ">
-              "A collection of Node JS and Golang Backend interview questions
-              please feel free to fork and contribute to this repositoryi "
-            </div>
-            <div className="text-xl text-right text-l-green">- Alex Samurai</div>
-
-          </div>
-        </div>
-        </div>
-        {/*  */}
- 
-        {/* <Testimonal /> */}
-        <div className="hidden p-8 my-20 bg-black place-items-center">
+        <div
+          className={
+            showlatest ? "p-8 my-20 bg-black place-items-center" : " hidden"
+          }
+        >
           {" "}
-          <div className="text-3xl text-l-green">Design Philosophy:</div>
+          <div className="my-4 text-2xl font-bold clt-text-2">
+            Design Philosophy:
+          </div>
           <div className="flex items-center text-white ">
-            <div className="pr-4 text-lg text-white ">
-              <ul className="text-white list-disc list-outside text-opacity-60">
+            <div className="pr-4 text-base text-white ">
+              <ul className="space-y-2 text-white list-disc list-outside text-opacity-60">
                 <li>To reduce the number of traffic accidents and deaths</li>
                 <li>
                   To achieve a contactless enforcement system for rules outlined
@@ -362,18 +354,61 @@ function App() {
                   To become a frontrunner in adaptation of newer technologies.
                 </li>
                 <li>To generate more revenue for the government.</li>
-              </ul>
+              </ul>{" "}
+              <div className={!showlatest ? "hidden" : " mt-4"}>
+                <button
+                  onClick={(e) => {
+                    Setshowlatest(!showlatest);
+                  }}
+                  className="px-4 py-2 text-sm border rounded-lg btn"
+                >
+                  {!showlatest ? "Read More" : "show less"}
+                </button>
+              </div>
             </div>
             <div className="space-y-4 ">
               <div className="">
-                <img src="/imga.png" alt="" />
+                <img className="rounded-lg" src="/imga.png" alt="" />
               </div>
               <div className="">
-                <img src="/imgb.png" alt="" />
+                <img className="rounded-lg" src="/imgb.png" alt="" />
               </div>
             </div>
           </div>
         </div>
+
+        {/*  */}
+        <div className="my-16">
+          <div className="text-2xl font-bold clt-text-2">Testimonal</div>
+
+          <div className="flex items-center justify-between">
+            <div className="text-4xl font-bold text-white">
+              People Say About Us
+            </div>
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <div className="inline-flex items-center justify-center p-12 mx-auto space-x-4 space-y-4 text-left text-white testimonal rounded-2xl">
+            <div className="space-y-4">
+              <div className="">
+                <img className="w-40 h-40 rounded-full" src="/t1.png" alt="" />
+              </div>
+            </div>
+
+            <div className="w-full max-w-sm space-y-2">
+              <div className="text-justify ">
+                "A collection of Node JS and Golang Backend interview questions
+                please feel free to fork and contribute to this repositoryi "
+              </div>
+              <div className="text-xl text-right text-l-green">
+                - Alex Samurai
+              </div>
+            </div>
+          </div>
+        </div>
+        {/*  */}
+
+        {/* <Testimonal /> */}
 
         {/* <div className="grid grid-cols-2 p-8 my-20 bg-black place-items-center">
           <div className="space-y-10 text-white">
@@ -412,18 +447,18 @@ function App() {
         </div> */}
 
         {/*  */}
-        <div className="my-10 text-center text-white opacity-80">
+        <div id="core" className="my-10 text-center text-white opacity-80">
           <div className="py-10">
-            <div className="text-4xl font-bold text-l-green ">
-              Core Services
-            </div>
+            <div className="text-2xl font-bold clt-text-2">Core Services</div>
           </div>
           <div className="grid grid-cols-5 gap-4 text-xl place-content-center place-items-center ">
             <div className="space-y-3 ">
               <div className="px-4">
                 <img className="mx-auto rounded-full" src="/ic-1.png" alt="" />
               </div>
-              <div className="font-bold ">Machine <br/> Learning</div>
+              <div className="font-bold ">
+                Machine <br /> Learning
+              </div>
               {/* <div className="mx-auto text-white text-opacity-60 w-60">
                 We Provide the best Security For Your account
               </div> */}
@@ -432,19 +467,26 @@ function App() {
               <div className="px-4">
                 <img className="mx-auto rounded-full" src="/ic-3.jpg" alt="" />
               </div>
-              <div className="font-bold ">Predictive <br/> Analytics</div>
+              <div className="font-bold ">
+                Predictive <br /> Analytics
+              </div>
             </div>
             <div className="space-y-3 ">
               <div className="px-4">
                 <img className="mx-auto rounded-full" src="/ic-2.jpg" alt="" />
               </div>
-              <div className="font-bold ">Ai Powered  <br/> Product Development</div>
+              <div className="font-bold ">
+                Ai Powered <br /> Product Development
+              </div>
             </div>
             <div className="space-y-3 ">
               <div className="px-4">
                 <img className="mx-auto rounded-full" src="/ic-4.jpg" alt="" />
               </div>
-              <div className="font-bold ">Image <br/>Analytics</div>
+              <div className="font-bold ">
+                Image <br />
+                Analytics
+              </div>
             </div>
             <div className="space-y-3 ">
               <div className="px-4">
@@ -454,7 +496,9 @@ function App() {
                   alt=""
                 />
               </div>
-              <div className="font-bold ">Video <br/>  Analytics</div>
+              <div className="font-bold ">
+                Video <br /> Analytics
+              </div>
             </div>
             {/* <div className="space-y-3 ">
               <div className="">
@@ -478,10 +522,13 @@ function App() {
             </div> */}
           </div>
         </div>
-        <div className="pb-40 text-center text-l-green ">
+        <div
+          id="Computation Vision"
+          className="pb-40 text-center text-l-green "
+        >
           <div className="py-10">
-            <div className="text-4xl font-bold text-l-green ">
-              Core Services
+            <div className="text-2xl font-bold clt-text-2">
+              World Computation Vision
             </div>
           </div>
 
@@ -616,7 +663,11 @@ function App() {
             </div>
             <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
-                <img className="mx-auto rounded-lg h-60" src="/a-r43-1.jpg" alt="" />
+                <img
+                  className="mx-auto rounded-lg h-60"
+                  src="/a-r43-1.jpg"
+                  alt=""
+                />
               </div>
               <div className="text-2xl font-bold">Smart Cart</div>
               <div className="mx-auto text-white text-opacity-60 ">
@@ -736,7 +787,7 @@ function App() {
 
         <div className="flex items-center justify-between py-12 text-white">
           <div className="w-full max-w-xs space-y-4">
-            <div className="">
+            <div className="ml-4">
               {/* <img src="/footerlogo.png" alt="" /> */}
               <div className="text-5xl font-black text-l-green">Flystrix</div>
             </div>
@@ -744,27 +795,27 @@ function App() {
             <div className="grid grid-cols-5 pt-4 place-items-center">
               <div className="">
                 <img
-                  className="w-8"
+                  className="w-6"
                   src="/facebook-svgrepo-com (1).svg"
                   alt=""
                 />
               </div>
               <div className="">
-                <img className="w-8" src="/twitter-svgrepo-com.svg" alt="" />
+                <img className="w-6" src="/twitter-svgrepo-com.svg" alt="" />
               </div>
               <div className="">
                 <img
-                  className="w-8"
+                  className="w-6"
                   src="/instagram-social-media-svgrepo-com.svg"
                   alt=""
                 />
               </div>
               <div className="">
-                <img className="w-8" src="/linkedin-svgrepo-com.svg" alt="" />
+                <img className="w-6" src="/linkedin-svgrepo-com.svg" alt="" />
               </div>
               <div className="">
                 <img
-                  className="w-16"
+                  className="w-12"
                   src="/YouTube-Icon-Almost-Black-Logo.wine.svg"
                   alt=""
                 />

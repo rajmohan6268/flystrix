@@ -51,15 +51,17 @@ code {
   -ms-transform: scale(1) !important;
   -o-transform: scale(1) !important;
 }
-
+.text-t-title{
+  color: #62c800;
+}
 .btn {
-  color: #7fe15e;
-  border-color: #7fe15e;
+  color: #baff4d;
+  border-color: #baff4d;
 }
 
 .btn:hover {
 
-  background: #7fe15e;
+  background: #62c800;
   color: #000000;
 }
 
@@ -74,4 +76,9 @@ code {
 
 .card{
   background: #20454f40;
+}
+
+
+.clt-text-2{
+  color: #baff4d;;
 }
