@@ -46,4 +46,32 @@ code {
   filter: hue-rotate(287deg) !important;
   transform: scale(1) !important;
   object-position: 48% 2% !important;
+  -webkit-transform: scale(1) !important;
+  -moz-transform: scale(1) !important;
+  -ms-transform: scale(1) !important;
+  -o-transform: scale(1) !important;
+}
+
+.btn {
+  color: #7fe15e;
+  border-color: #7fe15e;
+}
+
+.btn:hover {
+
+  background: #7fe15e;
+  color: #000000;
+}
+
+.img-shdw{
+  box-shadow: 3px 3px 12px 0px #7fe15e66;
+}
+
+.testimonal{
+  background: #20454f2d;
+
+}
+
+.card{
+  background: #20454f40;
 }

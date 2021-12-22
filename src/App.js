@@ -1,5 +1,7 @@
 import "./App.css";
 
+import Testimonal from "./componets/testimonal";
+
 function App() {
   return (
     <div className="Green ">
@@ -15,20 +17,21 @@ function App() {
               <div className="">
                 <ul className="flex items-center space-x-8 ">
                   <li>
-                    <div>Home</div>
-                  </li>
-                  <li>
                     <div>About</div>
                   </li>
                   <li>
-                    <div>SERVICES</div>
+                    <div>Our latest </div>
+                  </li>
+                  <li>
+                    <div>Core </div>
+                  </li>
+                  <li>
+                    <div> Computation Vision</div>
                   </li>
                   {/* <li>
-                  <div>Core Services</div>
+                  <div></div>
                 </li>
-                <li>
-                  <div>World of Computation</div>
-                </li>
+                
                 <li>
                   <div>Our latest Project</div>
                 </li>
@@ -39,7 +42,7 @@ function App() {
               </div>
               <div className="space-x-5 text-black">
                 {/* <button className="w-24 py-2 bg-white rounded-lg">Login</button> */}
-                <button className="px-8 py-2 rounded-lg bg-l-green">
+                <button className="px-8 py-2 border rounded-lg btn">
                   Get in touch
                 </button>
               </div>
@@ -63,7 +66,7 @@ function App() {
             </div>
 
             <div className="">
-              <button className="px-12 py-3 text-xl rounded-lg bg-l-green">
+              <button className="px-8 py-2 text-xl border rounded-lg btn">
                 Get Started
               </button>
             </div>
@@ -75,15 +78,16 @@ function App() {
         {/*  */}
         <div className="text-white ">
           <div className="py-10 mx-auto space-y-8">
-            <div className="text-5xl font-bold text-center text-l-green">
-              About Flystrix
-            </div>
+           
 
             <div className="flex items-center">
               <div className="">
                 <img className="hr" src="/img.jpg" alt="" />
               </div>
-              <div className="p-8">
+              <div className="p-8"> <div className="mb-4 text-2xl font-bold text-left text-l-green">
+              About Flystrix
+
+            </div>
                 <ul className="space-y-3 text-white list-none list-outside text-opacity-60">
                   <li>
                     <div>
@@ -97,12 +101,14 @@ function App() {
                     <div>
                       The team progressed into advanced stages of the contest
                       which involved the design and development of AI-based
-                      Computer vision algorithms that can detect and categorize
-                      human/wildlife, and recognize the human hand signals and
-                      infer its meaning.
+                      Computer vision algorithms{" "}
+                      <span className="hidden">
+                        that can detect and categorize human/wildlife, and
+                        recognize the human hand signals and infer its meaning.
+                      </span>
                     </div>
                   </li>
-                  <li>
+                  <li className="hidden">
                     <div>
                       Since then, Flystrix Technologies has evolved into an
                       AI-Powered solutions provider with key expertise in
@@ -111,12 +117,19 @@ function App() {
                       development – from scratch & enhancements as well.
                     </div>
                   </li>
-                  <li>
+                  <li className="hidden">
                     <div>
                       We are proficient in solving problems intuitively. Our
                       team consists of experts from Electronics, Avionics,
                       Machine learning, Database Management, and Aerospace
                       engineering.
+                    </div>
+                  </li>
+                  <li>
+                    <div className="">
+                      <button className="px-4 py-2 text-sm border rounded-lg btn">
+                        Read More
+                      </button>
                     </div>
                   </li>
                 </ul>
@@ -142,23 +155,52 @@ function App() {
           </div>
         </div>
         {/*  */}
-        <div className="text-white ">
+        {/* <div className="mt-20 text-white ">
           <div className="py-10 mx-auto space-y-8">
-            <div className="text-5xl font-bold text-center text-l-green">
+            <div className="text-2xl font-bold text-center text-l-green">
               Our Latest Project
             </div>
           </div>
-        </div>
+        </div> */}
         {/*  */}
-        <div className="text-center text-white">
+        <div className="my-10 text-center text-white">
           {/* <div className="py-10">
             <div className="text-4xl font-bold text-l-green ">
               Core Services
             </div>
             <div className="text-xl text-white">Best features </div>
           </div> */}
-
-          <ul className="space-y-4 text-justify text-white text-opacity-60">
+          <div className="my-4 text-2xl font-bold text-left text-l-green">
+              Our Latest Project
+            </div>
+          <div className="grid grid-cols-2 gap-12 ">
+            <div className="text-justify text-white text-opacity-60">
+              In-person traffic policing often leads to heated arguments between
+              traffic policemen and vehicle owners, which results in unseemly
+              controversies and media shining a negative light on the police
+              department. Manual policing becomes ineffective in catching the
+              offenders due to overcrowded roads and the limited availability of
+              police force to be deployed on traffic duty. There is also a risk
+              of choking the flow of traffic while performing the duty as
+              violators pile up. This can be avoided in entirety by making use
+              of traffic cams and next-generation artificial intelligence
+              algorithms in identifying the offenders at the comfort of the
+              control room environment.
+              <div className="flex justify-start mt-4">
+                <button className="px-4 py-2 text-sm border rounded-lg btn">
+                  Read More
+                </button>
+              </div>
+            </div>
+            <div className="">
+              <img
+                className="max-w-sm rounded-2xl img-shdw "
+                src="/imga.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <ul className="hidden space-y-4 text-justify text-white text-opacity-60">
             <li>
               In-person traffic policing often leads to heated arguments between
               traffic policemen and vehicle owners, which results in unseemly
@@ -171,29 +213,32 @@ function App() {
               of traffic cams and next-generation artificial intelligence
               algorithms in identifying the offenders at the comfort of the
               control room environment.
-            </li>
-            <li>
-              Vigilance, a smart traffic management suite, designed and
-              developed by Flystrix Technologies helps governments in enforcing
-              The Motor Vehicle Act in an effective way while keeping the
-              relationship with the general public, more friendly and healthy.
-            </li>
-            <li>
-              Vigilane is equipped with sophisticated AI algorithms to
-              automatically detect violators by processing the input video feed.
-              It is capable of working with standard IP Cameras that are
-              positioned carefully by taking various factors into account such
-              as the area to cover, vehicles of interest, resolution of license
-              plate.
-            </li>
-            <li>
-              Vigilane was designed with a philosophy of bringing down road
-              fatalities, thereby focusing on helmetless two-wheelers. Vigilane
-              provides a front-end application that helps to verify the offenses
-              manually if needed. Vigilane, by design, is integrated with GoI’s
-              Intelligent Traffic Management System (ITMS) portal for an
-              e-challan generation.
-            </li>
+            </li>{" "}
+            <div>
+              <li>
+                Vigilance, a smart traffic management suite, designed and
+                developed by Flystrix Technologies helps governments in
+                enforcing The Motor Vehicle Act in an effective way while
+                keeping the relationship with the general public, more friendly
+                and healthy.
+              </li>
+              <li>
+                Vigilane is equipped with sophisticated AI algorithms to
+                automatically detect violators by processing the input video
+                feed. It is capable of working with standard IP Cameras that are
+                positioned carefully by taking various factors into account such
+                as the area to cover, vehicles of interest, resolution of
+                license plate.
+              </li>
+              <li>
+                Vigilane was designed with a philosophy of bringing down road
+                fatalities, thereby focusing on helmetless two-wheelers.
+                Vigilane provides a front-end application that helps to verify
+                the offenses manually if needed. Vigilane, by design, is
+                integrated with GoI’s Intelligent Traffic Management System
+                (ITMS) portal for an e-challan generation.
+              </li>
+            </div>
           </ul>
           {/* <div className="grid grid-cols-3 gap-12 text-lg place-content-center place-items-center ">
             <div className="space-y-3 ">
@@ -246,7 +291,39 @@ function App() {
           </div> */}
         </div>
         {/*  */}
-        <div className="p-8 my-20 bg-black place-items-center">
+
+        <div className="my-16">
+          <div className="text-l-green">Testimonal</div>
+
+          <div className="flex items-center justify-between">
+            <div className="text-4xl font-bold text-white">
+              People Say About Us
+            </div>
+
+          </div>
+        </div>
+        <div className="flex justify-center">
+        <div className="inline-flex items-center justify-center p-12 mx-auto space-x-4 space-y-4 text-left text-white testimonal rounded-2xl">
+          <div className="space-y-4">
+            <div className="">
+              <img className="w-40 h-40 rounded-full" src="/t1.png" alt="" />
+            </div>
+          </div>
+
+          <div className="w-full max-w-sm space-y-2">
+            <div className="text-justify ">
+              "A collection of Node JS and Golang Backend interview questions
+              please feel free to fork and contribute to this repositoryi "
+            </div>
+            <div className="text-xl text-right text-l-green">- Alex Samurai</div>
+
+          </div>
+        </div>
+        </div>
+        {/*  */}
+ 
+        {/* <Testimonal /> */}
+        <div className="hidden p-8 my-20 bg-black place-items-center">
           {" "}
           <div className="text-3xl text-l-green">Design Philosophy:</div>
           <div className="flex items-center text-white ">
@@ -335,49 +412,49 @@ function App() {
         </div> */}
 
         {/*  */}
-        <div className="pb-40 text-center text-white">
+        <div className="my-10 text-center text-white opacity-80">
           <div className="py-10">
             <div className="text-4xl font-bold text-l-green ">
               Core Services
             </div>
           </div>
-          <div className="grid grid-cols-5 gap-12 text-xl place-content-center place-items-center ">
+          <div className="grid grid-cols-5 gap-4 text-xl place-content-center place-items-center ">
             <div className="space-y-3 ">
-              <div className="">
+              <div className="px-4">
                 <img className="mx-auto rounded-full" src="/ic-1.png" alt="" />
               </div>
-              <div className="font-bold ">Machine Learning</div>
+              <div className="font-bold ">Machine <br/> Learning</div>
               {/* <div className="mx-auto text-white text-opacity-60 w-60">
                 We Provide the best Security For Your account
               </div> */}
             </div>
             <div className="space-y-3 ">
-              <div className="">
+              <div className="px-4">
                 <img className="mx-auto rounded-full" src="/ic-3.jpg" alt="" />
               </div>
-              <div className="font-bold ">Predictive Analytics</div>
+              <div className="font-bold ">Predictive <br/> Analytics</div>
             </div>
-            <div className="mt-6 space-y-3">
-              <div className="">
+            <div className="space-y-3 ">
+              <div className="px-4">
                 <img className="mx-auto rounded-full" src="/ic-2.jpg" alt="" />
               </div>
-              <div className="font-bold ">Ai Powered Product Development</div>
+              <div className="font-bold ">Ai Powered  <br/> Product Development</div>
             </div>
             <div className="space-y-3 ">
-              <div className="">
+              <div className="px-4">
                 <img className="mx-auto rounded-full" src="/ic-4.jpg" alt="" />
               </div>
-              <div className="font-bold ">Video Analytics</div>
+              <div className="font-bold ">Image <br/>Analytics</div>
             </div>
             <div className="space-y-3 ">
-              <div className="">
+              <div className="px-4">
                 <img
                   className="mx-auto rounded-full"
                   src="/ic-5-1.jpg"
                   alt=""
                 />
               </div>
-              <div className="font-bold ">Video Analytics</div>
+              <div className="font-bold ">Video <br/>  Analytics</div>
             </div>
             {/* <div className="space-y-3 ">
               <div className="">
@@ -409,10 +486,10 @@ function App() {
           </div>
 
           <div className="grid grid-cols-3 gap-10">
-            <div className="space-y-3 ">
+            <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
                 <img
-                  className="mx-auto h-60"
+                  className="mx-auto rounded-lg h-60"
                   src="/267651_q8Bq1q0tb0BSCaVmcHygFw.png"
                   alt=""
                 />
@@ -423,10 +500,10 @@ function App() {
                 training/yoga/Zumba mobile application.
               </div>
             </div>
-            <div className="space-y-3 ">
+            <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
                 <img
-                  className="mx-auto h-60"
+                  className="mx-auto rounded-lg h-60"
                   src="/Digital-imaging-solutions-to-enhance-clinical-diagnosis.png"
                   alt=""
                 />
@@ -436,10 +513,10 @@ function App() {
                 Automated analysis of Radiology images for bone fracture.
               </div>
             </div>{" "}
-            <div className="space-y-3 ">
+            <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
                 <img
-                  className="mx-auto h-60"
+                  className="mx-auto rounded-lg h-60"
                   src="/SLIDER-Appen_image_annotation_05.jpg"
                   alt=""
                 />
@@ -453,10 +530,10 @@ function App() {
                 authentication of tenants.
               </div>
             </div>
-            <div className="space-y-3 ">
+            <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
                 <img
-                  className="mx-auto h-60"
+                  className="mx-auto rounded-lg h-60"
                   src="/Facial-Recognition-1024x483-1.jpg"
                   alt=""
                 />
@@ -466,10 +543,10 @@ function App() {
                 Automated Attendance system, opening/closing of doors.
               </div>
             </div>
-            <div className="space-y-3 ">
+            <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
                 <img
-                  className="mx-auto h-60"
+                  className="mx-auto rounded-lg h-60"
                   src="/Vision-AI-powered-Automatic-Number.png
                   "
                   alt=""
@@ -482,10 +559,10 @@ function App() {
                 Automatic License Plate Reader for India region.
               </div>
             </div>
-            <div className="space-y-3 ">
+            <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
                 <img
-                  className="mx-auto h-60"
+                  className="mx-auto rounded-lg h-60"
                   src="/1920x1080.jpg
                   "
                   alt=""
@@ -496,10 +573,10 @@ function App() {
                 Enabling the eyes of the rover to see and avoid obstacles.
               </div>
             </div>{" "}
-            <div className="space-y-3 ">
+            <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
                 <img
-                  className="mx-auto h-60"
+                  className="mx-auto rounded-lg h-60"
                   src="/image-product-recognition.jpg"
                   alt=""
                 />
@@ -509,10 +586,10 @@ function App() {
                 Identifying and classifying items in supermarkets.
               </div>
             </div>
-            <div className="space-y-3 ">
+            <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
                 <img
-                  className="mx-auto h-60"
+                  className="mx-auto rounded-lg h-60"
                   src="/object-dectection-4 (2).jpg"
                   alt=""
                 />
@@ -523,10 +600,10 @@ function App() {
                 insights into items of interest.
               </div>
             </div>
-            <div className="space-y-3 ">
+            <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
                 <img
-                  className="mx-auto h-60"
+                  className="mx-auto rounded-lg h-60"
                   src="/0_MI6hiWIBXPQbJW8p.gif"
                   alt=""
                 />
@@ -537,64 +614,20 @@ function App() {
                 products.
               </div>
             </div>
-            <div className="space-y-3 ">
+            <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
-                <img className="mx-auto h-60" src="/a-r43-1.jpg" alt="" />
+                <img className="mx-auto rounded-lg h-60" src="/a-r43-1.jpg" alt="" />
               </div>
               <div className="text-2xl font-bold">Smart Cart</div>
               <div className="mx-auto text-white text-opacity-60 ">
                 Detect and recognize items as they go into the shopping cart and
                 bill them.
               </div>
-            </div>{" "}
-          </div>
-        </div>
-        <div className="pb-12">
-          <div className="text-l-green">Testimonal</div>
-
-          <div className="flex items-center justify-between">
-            <div className="text-5xl font-bold text-white">
-              People Say About Us
-            </div>
-
-            <div className="">
-              <button>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-10 h-10 text-l-green"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                    d="M15 19l-7-7 7-7"
-                  />
-                </svg>
-              </button>
-              <button>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-10 h-10 text-l-green"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </button>
             </div>
           </div>
         </div>
-        {/*  */}
 
+        {/* 
         <div className="grid grid-cols-3 gap-12 text-center text-white place-items-center place-content-center">
           {[1, 1, 1].map(() => {
             return (
@@ -621,7 +654,7 @@ function App() {
               </>
             );
           })}
-        </div>
+        </div> */}
         {/*  */}
 
         {/* <div className="grid grid-cols-3 p-16 my-16 mt-60 place-items-start rounded-3xl box-bg">
