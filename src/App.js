@@ -1,38 +1,42 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
 
 // import Testimonal from "./componets/testimonal";
 
 function App() {
   const [showabout, Setshowabout] = useState(true);
   const [showlatest, Setshowlatest] = useState(false);
-
+  AOS.init();
   return (
-    <div className="Green ">
-      <div className="px-16 mx-auto conatiner max-w-7xl">
-        <div className="py-8">
-          <div className="flex items-center justify-between text-white">
-            <div className="text-5xl font-black text-l-green">
-              {/* <img src="/logoo.png" alt="" /> */}
-              Flystrix
-            </div>
+    <div className="relative h-screen overflow-x-hidden overflow-y-scroll Green">
+      <div id="start" className="px-8 mx-auto lg:px-16 conatiner max-w-7xl">
+        <div className="sticky top-0 z-10 w-full py-4 bg-black bg-opacity-95 blur-3xl 2xl:max-w-6xl">
+          <div className="">
+            <div className="flex items-center justify-between w-full text-white ">
+              <div className="text-3xl font-black sm:text-5xl text-l-green">
+                {/* <img src="/logoo.png" alt="" /> */}
+                <a href="#start"> Flystrix</a>
+              </div>
 
-            <div className="flex items-center space-x-6">
-              <div className="">
-                <ul className="flex items-center space-x-8 ">
-                  <li>
-                    <a href="#About">About</a>
-                  </li>
-                  <li>
-                    <a href="#Our latest">Our latest </a>
-                  </li>
-                  <li>
-                    <a href="#core">Core </a>
-                  </li>
-                  <li>
-                    <a href="#Computation Vision"> Computation Vision</a>
-                  </li>
-                  {/* <li>
+              <div className="items-center hidden space-x-6 lg:flex">
+                <div className="">
+                  <ul className="flex items-center space-x-8 ">
+                    <li>
+                      <a href="#About">About</a>
+                    </li>
+                    <li>
+                      <a href="#Our latest">Our latest </a>
+                    </li>
+                    <li>
+                      <a href="#core">Core </a>
+                    </li>
+                    <li>
+                      <a href="#Computation Vision"> Computation Vision</a>
+                    </li>
+                    {/* <li>
                   <div></div>
                 </li>
                 
@@ -42,26 +46,27 @@ function App() {
                 <li>
                   <div>Help</div>
                 </li> */}
-                </ul>
-              </div>
-              <div className="space-x-5 text-black">
-                {/* <button className="w-24 py-2 bg-white rounded-lg">Login</button> */}
-                <button className="px-8 py-2 border rounded-lg btn">
-                  Get in touch
-                </button>
+                  </ul>
+                </div>
+                <div className="space-x-5 text-black">
+                  {/* <button className="w-24 py-2 bg-white rounded-lg">Login</button> */}
+                  <button className="px-8 py-2 border rounded-lg btn">
+                    Get in touch
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
         {/*  */}
 
-        <div className="flex items-center py-20 place-items-center">
-          <div className="w-5/12 space-y-10">
-            <div className="text-2xl text-t-title">
+        <div className="items-center py-8 sm:py-20 lg:flex place-items-center ">
+          <div className="space-y-4 sm:space-y-10 lg:w-5/12">
+            <div className="text-lg sm:text-2xl text-t-title">
               Into the world of Machine Learning
             </div>
 
-            <div className="text-6xl font-black text-white">
+            <div className="text-4xl font-black text-white sm:text-6xl">
               Let’s explore the world of Artificial Intelligence
             </div>
 
@@ -69,24 +74,31 @@ function App() {
               Let’s explore the world of Artificial Intelligence.
             </div>
 
-            <div className="">
+            <div className="flex justify-center sm:justify-start">
               <button className="px-8 py-2 text-xl border rounded-lg btn">
                 Get Started
               </button>
             </div>
           </div>
-          <div className="w-7/12">
-            <img className="w-full " src="/bimg-removebg-preview.png" alt="" />
+          <div className="lg:w-7/12">
+            <img
+              data-aos-easing="linear"
+              data-aos-duration="1000"
+              data-aos="fade-up"
+              className="w-full "
+              src="/bimg-removebg-preview.png"
+              alt=""
+            />
           </div>
         </div>
         {/*  */}
-        <div id="About" className="text-white ">
-          <div className="py-10 mx-auto space-y-8">
-            <div className="flex items-center">
-              <div className="w-1/2">
+        <div id="About" className="text-white id ">
+          <div className="mx-auto space-y-8 sm:py-10">
+            <div className="items-center lg:flex">
+              <div className="lg:w-1/2">
                 <img className="hr" src="/img.jpg" alt="" />
               </div>
-              <div className="w-1/2 p-8">
+              <div className="my-8 lg:p-8 lg:w-1/2 lg:my-0">
                 {" "}
                 <div className="mb-4 text-2xl font-bold text-left clt-text-2">
                   About Flystrix
@@ -131,7 +143,9 @@ function App() {
                   <li>
                     <div className="">
                       <button
-                        onClick={(e) => [Setshowabout(!showabout)]}
+                        onClick={(e) => {
+                          Setshowabout(!showabout);
+                        }}
                         className="px-4 py-2 text-sm border rounded-lg btn"
                       >
                         {showabout ? "Read More" : "show less"}
@@ -169,7 +183,7 @@ function App() {
           </div>
         </div> */}
         {/*  */}
-        <div id="Our latest" className="my-10 text-center text-white">
+        <div id="Our latest" className="my-10 text-center text-white id">
           {/* <div className="py-10">
             <div className="text-4xl font-bold text-l-green ">
               Core Services
@@ -180,7 +194,11 @@ function App() {
             Our Latest Project
           </div>
           <div
-            className={!showlatest ? " grid grid-cols-2 gap-12  " : "hidden   "}
+            className={
+              !showlatest
+                ? " lg:grid lg:grid-cols-2 gap-12 space-y-10 lg:space-y-0   "
+                : "hidden   "
+            }
           >
             <div className="text-justify text-white text-opacity-60">
               In-person traffic policing often leads to heated arguments between
@@ -196,7 +214,9 @@ function App() {
               control room environment.
               <div className="flex justify-start mt-4">
                 <button
-                  onClick={(e) => [Setshowlatest(!showlatest)]}
+                  onClick={(e) => {
+                    Setshowlatest(!showlatest)
+                  }}
                   className="px-4 py-2 text-sm border rounded-lg btn"
                 >
                   Read More
@@ -204,8 +224,8 @@ function App() {
               </div>
             </div>
             <div className="">
-              <img
-                className="max-w-sm rounded-2xl img-shdw "
+              <img 
+                className="sm:max-w-sm rounded-2xl img-shdw "
                 src="/imga.png"
                 alt=""
               />
@@ -311,14 +331,16 @@ function App() {
         {/*  */}
         <div
           className={
-            showlatest ? "p-8 my-20 bg-black place-items-center" : " hidden"
+            showlatest
+              ? "sm:p-8 sm:my-20 bg-black place-items-center"
+              : " hidden"
           }
         >
           {" "}
           <div className="my-4 text-2xl font-bold clt-text-2">
             Design Philosophy:
           </div>
-          <div className="flex items-center text-white ">
+          <div className="items-center space-y-10 text-white lg:space-y-0 lg:flex ">
             <div className="pr-4 text-base text-white ">
               <ul className="space-y-2 text-white list-disc list-outside text-opacity-60">
                 <li>To reduce the number of traffic accidents and deaths</li>
@@ -382,16 +404,20 @@ function App() {
           <div className="text-2xl font-bold clt-text-2">Testimonal</div>
 
           <div className="flex items-center justify-between">
-            <div className="text-4xl font-bold text-white">
+            <div className="text-2xl font-bold text-white sm:text-4xl">
               People Say About Us
             </div>
           </div>
         </div>
         <div className="flex justify-center">
-          <div className="inline-flex items-center justify-center p-12 mx-auto space-x-4 space-y-4 text-left text-white testimonal rounded-2xl">
+          <div className="items-center justify-center p-8 mx-auto space-y-4 text-left text-white sm:p-12 sm:space-x-4 sm:inline-flex testimonal rounded-2xl">
             <div className="space-y-4">
               <div className="">
-                <img className="w-40 h-40 rounded-full" src="/t1.png" alt="" />
+                <img
+                  className="w-32 h-32 mx-auto rounded-full sm:w-40 sm:h-40"
+                  src="/t1.png"
+                  alt=""
+                />
               </div>
             </div>
 
@@ -447,11 +473,11 @@ function App() {
         </div> */}
 
         {/*  */}
-        <div id="core" className="my-10 text-center text-white opacity-80">
+        <div id="core" className="my-10 text-center text-white id opacity-80">
           <div className="py-10">
             <div className="text-2xl font-bold clt-text-2">Core Services</div>
           </div>
-          <div className="grid grid-cols-5 gap-4 text-xl place-content-center place-items-center ">
+          <div className="grid gap-4 text-xl sm:grid-cols-2 lg:grid-cols-5 place-content-center place-items-center ">
             <div className="space-y-3 ">
               <div className="px-4">
                 <img className="mx-auto rounded-full" src="/ic-1.png" alt="" />
@@ -524,7 +550,7 @@ function App() {
         </div>
         <div
           id="Computation Vision"
-          className="pb-40 text-center text-l-green "
+          className="pb-10 text-center lg:pb-40 id text-l-green "
         >
           <div className="py-10">
             <div className="text-2xl font-bold clt-text-2">
@@ -532,7 +558,7 @@ function App() {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-10">
+          <div className="grid gap-4 sm:grid-cols-2 lg:gap-10 lg:grid-cols-3">
             <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
                 <img
@@ -785,7 +811,7 @@ function App() {
         </div> */}
         {/*  */}
 
-        <div className="flex items-center justify-between py-12 text-white">
+        <div className="items-center justify-between py-12 text-white sm:flex">
           <div className="w-full max-w-xs space-y-4">
             <div className="ml-4">
               {/* <img src="/footerlogo.png" alt="" /> */}
@@ -822,7 +848,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div>
+          <div className="mt-4 ml-4 lg:ml-0 lg:mt-0">
             <div>mahaaveer@gmail.com</div>
             <div>(91) 9994629499</div>
           </div>

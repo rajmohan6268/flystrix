@@ -46,3 +46,9 @@
 .slick-disabled {
   display: none !important;
 }
+
+.id {
+  margin-top: -100px; 
+  padding-top: 100px; 
+  display: inline-block;
+}
