@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState,  } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
@@ -215,7 +215,7 @@ function App() {
               <div className="flex justify-start mt-4">
                 <button
                   onClick={(e) => {
-                    Setshowlatest(!showlatest)
+                    Setshowlatest(!showlatest);
                   }}
                   className="px-4 py-2 text-sm border rounded-lg btn"
                 >
@@ -224,7 +224,7 @@ function App() {
               </div>
             </div>
             <div className="">
-              <img 
+              <img
                 className="sm:max-w-sm rounded-2xl img-shdw "
                 src="/imga.png"
                 alt=""
