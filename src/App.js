@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 
-import Testimonal from "./componets/testimonal";
+// import Testimonal from "./componets/testimonal";
 
 function App() {
   const [showabout, Setshowabout] = useState(true);
