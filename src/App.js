@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState,  } from "react";
+import { useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
@@ -9,9 +9,102 @@ import "aos/dist/aos.css"; // You can also use <link> for styles
 function App() {
   const [showabout, Setshowabout] = useState(true);
   const [showlatest, Setshowlatest] = useState(false);
+  const [menu, Setmenu] = useState(true);
+
   AOS.init();
   return (
     <div className="relative h-screen overflow-x-hidden overflow-y-scroll Green">
+      {/*  */}
+      <div
+        className={
+          !menu
+            ? "text-white fixed bg-black z-50 w-full max-h-screen min-h-screen flex-col flex justify-evenly text-center items-center"
+            : "hidden"
+        }
+      >
+        {" "}
+        <div className="text-3xl font-black sm:text-5xl text-l-green">
+          {/* <img src="/logoo.png" alt="" /> */}
+          <a href="#start"> Flystrix</a>
+        </div>
+        <div className="">
+          <ul className="flex flex-col space-y-6 ">
+            <li>
+              <a
+                onClick={(e) => {
+                  Setmenu(!menu);
+                }}
+                href="#About"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                onClick={(e) => {
+                  Setmenu(!menu);
+                }}
+                href="#Our latest"
+              >
+                Our latest{" "}
+              </a>
+            </li>
+            <li>
+              <a
+                onClick={(e) => {
+                  Setmenu(!menu);
+                }}
+                href="#core"
+              >
+                Core{" "}
+              </a>
+            </li>
+            <li>
+              <a
+                onClick={(e) => {
+                  Setmenu(!menu);
+                }}
+                href="#Computation Vision"
+              >
+                {" "}
+                Computer Vision
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className="space-x-5 text-black">
+          {/* <button className="w-24 py-2 bg-white rounded-lg">Login</button> */}
+          <button
+            onClick={(e) => {
+              Setmenu(!menu);
+            }}
+            className="px-8 py-2 border rounded-lg btn"
+          >
+            Get in touch
+          </button>
+        </div>{" "}
+        <button
+          onClick={(e) => {
+            Setmenu(!menu);
+          }}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="#62c800"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+      {/*  */}
       <div id="start" className="px-8 mx-auto lg:px-16 conatiner max-w-7xl">
         <div className="sticky top-0 z-10 w-full py-4 bg-black bg-opacity-95 blur-3xl 2xl:max-w-6xl">
           <div className="">
@@ -19,6 +112,28 @@ function App() {
               <div className="text-3xl font-black sm:text-5xl text-l-green">
                 {/* <img src="/logoo.png" alt="" /> */}
                 <a href="#start"> Flystrix</a>
+              </div>
+              <div className="sm:hidden">
+                <button
+                  onClick={(e) => {
+                    Setmenu(!menu);
+                  }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="#62c800"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 6h16M4 12h16m-7 6h7"
+                    />
+                  </svg>
+                </button>
               </div>
 
               <div className="items-center hidden space-x-6 lg:flex">
@@ -59,51 +174,55 @@ function App() {
           </div>
         </div>
         {/*  */}
-<div className="">
+        <div className="">
+          <div className="items-center py-8 sm:py-20 lg:flex place-items-center">
+            <div className="space-y-4 sm:space-y-10 lg:w-5/12">
+              <div className="text-lg sm:text-2xl text-t-title">
+                Into the world of Machine Learning
+              </div>
 
-        <div className="items-center py-8 sm:py-20 lg:flex place-items-center">
-          <div className="space-y-4 sm:space-y-10 lg:w-5/12">
-            <div className="text-lg sm:text-2xl text-t-title">
-              Into the world of Machine Learning
+              <div className="text-4xl font-black text-white sm:text-6xl">
+                Hi Humans !
+              </div>
+
+              <div className="text-lg text-white">
+                Let’s explore the world of Artificial Intelligence.
+              </div>
+
+              <div className="flex justify-center sm:justify-start">
+                <button className="px-8 py-2 text-xl border rounded-lg btn">
+                  Get Started
+                </button>
+              </div>
             </div>
-
-            <div className="text-4xl font-black text-white sm:text-6xl">
-             Hi Humans !
-            </div>
-
-            <div className="text-lg text-white">
-              Let’s explore the world of Artificial Intelligence.
-            </div>
-
-            <div className="flex justify-center sm:justify-start">
-              <button className="px-8 py-2 text-xl border rounded-lg btn">
-                Get Started
-              </button>
+            <div className="lg:w-7/12">
+              <img
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+                data-aos="fade-up"
+                className="w-full "
+                src="/bimg-removebg-preview.png"
+                alt=""
+              />
             </div>
           </div>
-          <div className="lg:w-7/12">
-            <img
-              data-aos-easing="linear"
-              data-aos-duration="1000"
-              data-aos="fade-up"
-              className="w-full "
-              src="/bimg-removebg-preview.png"
-              alt=""
-            />
-          </div>
-        </div></div>
+        </div>
 
         {/*  */}
         <div id="About" className="py-10 text-white id ">
           <div className="mx-auto space-y-8 sm:py-10">
             <div className="items-center lg:flex">
               <div className="lg:w-1/2">
-                <img className="mx-auto hr animate-pulse" src="/img 1.jpg" alt="" />
+                <img
+                  className="mx-auto hr animate-pulse"
+                  src="/img 1.jpg"
+                  alt=""
+                />
               </div>
               <div className="my-8 lg:p-8 lg:w-1/2 lg:my-0">
                 {" "}
                 <div className="mb-4 text-2xl font-bold text-left clt-text-2">
-                  About 
+                  About
                 </div>
                 <ul className="space-y-3 text-white list-none list-outside text-opacity-60">
                   <li>
@@ -194,7 +313,7 @@ function App() {
             <div className="text-xl text-white">Best features </div>
           </div> */}
           <div className="my-4 text-2xl font-bold text-left clt-text-2">
-            Our Latest 
+            Our Latest
           </div>
           <div
             className={
@@ -556,19 +675,13 @@ function App() {
           className="pb-10 text-center lg:pb-40 id text-l-green "
         >
           <div className="py-10">
-            <div className="text-2xl font-bold clt-text-2">
-               Computer Vision
-            </div>
+            <div className="text-2xl font-bold clt-text-2">Computer Vision</div>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2 lg:gap-10 lg:grid-cols-3">
             <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
-                <img
-                  className="mx-auto rounded-lg"
-                  src="/img 5.jpg"
-                  alt=""
-                />
+                <img className="mx-auto rounded-lg" src="/img 5.jpg" alt="" />
               </div>
               <div className="text-2xl font-bold">Posture Detection</div>
               <div className="mx-auto text-white text-opacity-60 ">
@@ -578,11 +691,7 @@ function App() {
             </div>
             <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
-                <img
-                  className="mx-auto rounded-lg "
-                  src="/img 6.jpg"
-                  alt=""
-                />
+                <img className="mx-auto rounded-lg " src="/img 6.jpg" alt="" />
               </div>
               <div className="text-2xl font-bold">Medical Image Analysis</div>
               <div className="mx-auto text-white text-opacity-60 ">
@@ -591,11 +700,7 @@ function App() {
             </div>{" "}
             <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
-                <img
-                  className="mx-auto rounded-lg "
-                  src="/img 7.jpg"
-                  alt=""
-                />
+                <img className="mx-auto rounded-lg " src="/img 7.jpg" alt="" />
               </div>
               <div className="text-2xl font-bold">
                 Automated Management System
@@ -608,11 +713,7 @@ function App() {
             </div>
             <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
-                <img
-                  className="mx-auto rounded-lg "
-                  src="/img 8.jpg"
-                  alt=""
-                />
+                <img className="mx-auto rounded-lg " src="/img 8.jpg" alt="" />
               </div>
               <div className="text-2xl font-bold">Face Recognition</div>
               <div className="mx-auto text-white text-opacity-60 ">
@@ -651,11 +752,7 @@ function App() {
             </div>{" "}
             <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
-                <img
-                  className="mx-auto rounded-lg "
-                  src="/img 11.jpg"
-                  alt=""
-                />
+                <img className="mx-auto rounded-lg " src="/img 11.jpg" alt="" />
               </div>
               <div className="text-2xl font-bold">Product Identification</div>
               <div className="mx-auto text-white text-opacity-60 ">
@@ -664,11 +761,7 @@ function App() {
             </div>
             <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
-                <img
-                  className="mx-auto rounded-lg "
-                  src="/img 4.jpg"
-                  alt=""
-                />
+                <img className="mx-auto rounded-lg " src="/img 4.jpg" alt="" />
               </div>
               <div className="text-2xl font-bold">Object Tracking</div>
               <div className="mx-auto text-white text-opacity-60 ">
@@ -678,11 +771,7 @@ function App() {
             </div>
             <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
-                <img
-                  className="mx-auto rounded-lg "
-                  src="/img 2.jpg"
-                  alt=""
-                />
+                <img className="mx-auto rounded-lg " src="/img 2.jpg" alt="" />
               </div>
               <div className="text-2xl font-bold">Damage Identification</div>
               <div className="mx-auto text-white text-opacity-60 ">
@@ -692,11 +781,7 @@ function App() {
             </div>
             <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
-                <img
-                  className="mx-auto rounded-lg "
-                  src="/img 3.jpg"
-                  alt=""
-                />
+                <img className="mx-auto rounded-lg " src="/img 3.jpg" alt="" />
               </div>
               <div className="text-2xl font-bold">Smart Cart</div>
               <div className="mx-auto text-white text-opacity-60 ">
