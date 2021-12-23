@@ -34,7 +34,7 @@ function App() {
                       <a href="#core">Core </a>
                     </li>
                     <li>
-                      <a href="#Computation Vision"> Computation Vision</a>
+                      <a href="#Computation Vision"> Computer Vision</a>
                     </li>
                     {/* <li>
                   <div></div>
@@ -59,15 +59,16 @@ function App() {
           </div>
         </div>
         {/*  */}
+<div className="">
 
-        <div className="items-center py-8 sm:py-20 lg:flex place-items-center ">
+        <div className="items-center py-8 sm:py-20 lg:flex place-items-center">
           <div className="space-y-4 sm:space-y-10 lg:w-5/12">
             <div className="text-lg sm:text-2xl text-t-title">
               Into the world of Machine Learning
             </div>
 
             <div className="text-4xl font-black text-white sm:text-6xl">
-              Let’s explore the world of Artificial Intelligence
+             Hi Humans !
             </div>
 
             <div className="text-lg text-white">
@@ -90,18 +91,19 @@ function App() {
               alt=""
             />
           </div>
-        </div>
+        </div></div>
+
         {/*  */}
-        <div id="About" className="text-white id ">
+        <div id="About" className="py-10 text-white id ">
           <div className="mx-auto space-y-8 sm:py-10">
             <div className="items-center lg:flex">
               <div className="lg:w-1/2">
-                <img className="hr" src="/img.jpg" alt="" />
+                <img className="mx-auto hr animate-pulse" src="/img 1.jpg" alt="" />
               </div>
               <div className="my-8 lg:p-8 lg:w-1/2 lg:my-0">
                 {" "}
                 <div className="mb-4 text-2xl font-bold text-left clt-text-2">
-                  About Flystrix
+                  About 
                 </div>
                 <ul className="space-y-3 text-white list-none list-outside text-opacity-60">
                   <li>
@@ -141,10 +143,11 @@ function App() {
                     </div>
                   </li>
                   <li>
-                    <div className="">
+                    <div className="z-50">
                       <button
                         onClick={(e) => {
                           Setshowabout(!showabout);
+                          console.log(showabout);
                         }}
                         className="px-4 py-2 text-sm border rounded-lg btn"
                       >
@@ -183,7 +186,7 @@ function App() {
           </div>
         </div> */}
         {/*  */}
-        <div id="Our latest" className="my-10 text-center text-white id">
+        <div id="Our latest" className="py-10 text-center text-white id">
           {/* <div className="py-10">
             <div className="text-4xl font-bold text-l-green ">
               Core Services
@@ -191,7 +194,7 @@ function App() {
             <div className="text-xl text-white">Best features </div>
           </div> */}
           <div className="my-4 text-2xl font-bold text-left clt-text-2">
-            Our Latest Project
+            Our Latest 
           </div>
           <div
             className={
@@ -554,7 +557,7 @@ function App() {
         >
           <div className="py-10">
             <div className="text-2xl font-bold clt-text-2">
-              World Computation Vision
+               Computer Vision
             </div>
           </div>
 
@@ -562,8 +565,8 @@ function App() {
             <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
                 <img
-                  className="mx-auto rounded-lg h-60"
-                  src="/267651_q8Bq1q0tb0BSCaVmcHygFw.png"
+                  className="mx-auto rounded-lg"
+                  src="/img 5.jpg"
                   alt=""
                 />
               </div>
@@ -576,8 +579,8 @@ function App() {
             <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
                 <img
-                  className="mx-auto rounded-lg h-60"
-                  src="/Digital-imaging-solutions-to-enhance-clinical-diagnosis.png"
+                  className="mx-auto rounded-lg "
+                  src="/img 6.jpg"
                   alt=""
                 />
               </div>
@@ -589,8 +592,8 @@ function App() {
             <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
                 <img
-                  className="mx-auto rounded-lg h-60"
-                  src="/SLIDER-Appen_image_annotation_05.jpg"
+                  className="mx-auto rounded-lg "
+                  src="/img 7.jpg"
                   alt=""
                 />
               </div>
@@ -606,8 +609,8 @@ function App() {
             <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
                 <img
-                  className="mx-auto rounded-lg h-60"
-                  src="/Facial-Recognition-1024x483-1.jpg"
+                  className="mx-auto rounded-lg "
+                  src="/img 8.jpg"
                   alt=""
                 />
               </div>
@@ -619,8 +622,8 @@ function App() {
             <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
                 <img
-                  className="mx-auto rounded-lg h-60"
-                  src="/Vision-AI-powered-Automatic-Number.png
+                  className="mx-auto rounded-lg "
+                  src="/img 9.jpg
                   "
                   alt=""
                 />
@@ -635,8 +638,8 @@ function App() {
             <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
                 <img
-                  className="mx-auto rounded-lg h-60"
-                  src="/1920x1080.jpg
+                  className="mx-auto rounded-lg "
+                  src="/img 10.jpg
                   "
                   alt=""
                 />
@@ -649,8 +652,8 @@ function App() {
             <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
                 <img
-                  className="mx-auto rounded-lg h-60"
-                  src="/image-product-recognition.jpg"
+                  className="mx-auto rounded-lg "
+                  src="/img 11.jpg"
                   alt=""
                 />
               </div>
@@ -662,8 +665,8 @@ function App() {
             <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
                 <img
-                  className="mx-auto rounded-lg h-60"
-                  src="/object-dectection-4 (2).jpg"
+                  className="mx-auto rounded-lg "
+                  src="/img 4.jpg"
                   alt=""
                 />
               </div>
@@ -676,8 +679,8 @@ function App() {
             <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
                 <img
-                  className="mx-auto rounded-lg h-60"
-                  src="/0_MI6hiWIBXPQbJW8p.gif"
+                  className="mx-auto rounded-lg "
+                  src="/img 2.jpg"
                   alt=""
                 />
               </div>
@@ -690,8 +693,8 @@ function App() {
             <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
                 <img
-                  className="mx-auto rounded-lg h-60"
-                  src="/a-r43-1.jpg"
+                  className="mx-auto rounded-lg "
+                  src="/img 3.jpg"
                   alt=""
                 />
               </div>
