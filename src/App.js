@@ -177,7 +177,7 @@ function App() {
         <div className="">
           <div className="items-center py-8 sm:py-20 lg:flex place-items-center">
             <div className="space-y-4 sm:space-y-10 lg:w-5/12">
-              <div className="text-lg sm:text-2xl text-t-title">
+              <div className="hidden text-lg sm:text-2xl text-t-title" >
                 Into the world of Machine Learning
               </div>
 
@@ -185,15 +185,15 @@ function App() {
                 Hi Humans !
               </div>
 
-              <div className="text-lg text-white">
+              <div className="hidden text-lg text-white">
                 Let’s explore the world of Artificial Intelligence.
               </div>
 
-              <div className="flex justify-center sm:justify-start">
+              {/* <div className="flex justify-center sm:justify-start ">
                 <button className="px-8 py-2 text-xl border rounded-lg btn">
                   Get Started
                 </button>
-              </div>
+              </div> */}
             </div>
             <div className="lg:w-7/12">
               <img
