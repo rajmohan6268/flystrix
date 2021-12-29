@@ -1,5 +1,7 @@
 import "./App.css";
 import { useState } from "react";
+import Typical from "react-typical";
+
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
@@ -183,7 +185,12 @@ function App() {
 
               <div className="ml-8 text-4xl font-black text-white sm:text-6xl">
                 <div className="css-typing">
-                  <p> Hi Humans ! </p>
+                  <Typical
+                    steps={[" Hi Humans !", 1000]}
+                    loop={Infinity}
+                    wrapper="p"
+                  />
+                  <p> </p>
                 </div>
               </div>
 
