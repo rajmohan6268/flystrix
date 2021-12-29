@@ -175,14 +175,16 @@ function App() {
         </div>
         {/*  */}
         <div className="">
-          <div className="items-center py-8 sm:py-20 lg:flex place-items-center">
+          <div className="flex flex-col items-center py-8 text-center sm:py-10 place-items-center">
             <div className="space-y-4 sm:space-y-10 lg:w-5/12">
-              <div className="hidden text-lg sm:text-2xl text-t-title" >
+              <div className="hidden text-lg sm:text-2xl text-t-title">
                 Into the world of Machine Learning
               </div>
 
-              <div className="text-4xl font-black text-white sm:text-6xl">
-                Hi Humans !
+              <div className="ml-8 text-4xl font-black text-white sm:text-6xl">
+                <div className="css-typing">
+                  <p> Hi Humans ! </p>
+                </div>
               </div>
 
               <div className="hidden text-lg text-white">
@@ -195,13 +197,13 @@ function App() {
                 </button>
               </div> */}
             </div>
-            <div className="lg:w-7/12">
+            <div className="mt-8 lg:w-7/12">
               <img
                 data-aos-easing="linear"
                 data-aos-duration="1000"
                 data-aos="fade-up"
                 className="w-full "
-                src="/bimg-removebg-preview.png"
+                src="/bot.png"
                 alt=""
               />
             </div>
@@ -213,11 +215,7 @@ function App() {
           <div className="mx-auto space-y-8 sm:py-10">
             <div className="items-center lg:flex">
               <div className="lg:w-1/2">
-                <img
-                  className="mx-auto hr animate-pulse"
-                  src="/img 1.jpg"
-                  alt=""
-                />
+                <img className="mx-auto hr " src="/img 1.jpg" alt="" />
               </div>
               <div className="my-8 lg:p-8 lg:w-1/2 lg:my-0">
                 {" "}
@@ -323,7 +321,7 @@ function App() {
             }
           >
             <div className="text-justify text-white text-opacity-60">
-              In-person traffic policing often leads to heated arguments between
+              In person traffic policing often leads to heated arguments between
               traffic policemen and vehicle owners, which results in unseemly
               controversies and media shining a negative light on the police
               department. Manual policing becomes ineffective in catching the
@@ -362,7 +360,7 @@ function App() {
             }
           >
             <li>
-              In-person traffic policing often leads to heated arguments between
+              In person traffic policing often leads to heated arguments between
               traffic policemen and vehicle owners, which results in unseemly
               controversies and media shining a negative light on the police
               department. Manual policing becomes ineffective in catching the
@@ -678,7 +676,7 @@ function App() {
             <div className="text-2xl font-bold clt-text-2">Computer Vision</div>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:gap-10 lg:grid-cols-3">
+          <div className="grid gap-4 text-sm md:gap-8 sm:grid-cols-2 2xl:gap-16 lg:grid-cols-3 2xl:text-base">
             <div className="p-4 space-y-3 rounded-3xl card">
               <div className="">
                 <img className="mx-auto rounded-lg" src="/img 5.jpg" alt="" />
